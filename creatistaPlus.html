@@ -85,8 +85,9 @@
                                         <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
                                         <button
                                         style="background-color:#2e3842;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-                                        id="checkout-button-sku_FsOG9Wy4vspE7g"
+                                        id="checkout-button-price_1M3QEMG0aVsg4cgcSBmSohnc"
                                         role="link"
+                                        type="button"
                                         >
                                         Checkout
                                         </button>
@@ -126,7 +127,7 @@
     <script src="assets/js/util.js" defer></script>
     <script src="assets/js/main.js" defer></script>
      <!-- Load Stripe.js on your website. -->
-     <script src="https://js.stripe.com/v3" defer></script>
+     <script src="https://js.stripe.com/v3"></script>
      <script src="assets/js/lazyload.min.js"></script>
      <script src="assets/js/modernizr-custom.js" defer></script>
      <script defer>
@@ -139,13 +140,13 @@
          (function () {
              var stripe = Stripe('pk_live_51M3PQvG0aVsg4cgcI1LKHapLNRungxqpZAhLMRuEzeTfhjO8h3caHGzIgcBgLUWRlPuLskOcOgDbuzsM0OW03ERL00hcWRnX2m');
  
-             var checkoutButton = document.getElementById('checkout-button-prod_Mn0EsIV1FPBybh');
+             var checkoutButton = document.getElementById('checkout-button-price_1M3QEMG0aVsg4cgcSBmSohnc');
              checkoutButton.addEventListener('click', function () {
                  // When the customer clicks on the button, redirect
                  // them to Checkout.
                  stripe.redirectToCheckout({
-                     items: [{ sku: 'prod_Mn0EsIV1FPBybh', quantity: parseInt(document.getElementById("quant").value) }],
- 
+                    lineItems: [{ price: 'price_1M3QEMG0aVsg4cgcSBmSohnc', quantity: parseInt(document.getElementById("quant").value) }],
+                    mode: 'payment',
                      // Do not rely on the redirect to the successUrl for fulfilling
                      // purchases, customers may not always reach the success_url after
                      // a successful payment.
