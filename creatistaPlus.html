@@ -7,17 +7,17 @@
 <html lang="en">
 
 <head>
-    <title>Nespresso King - Create Your Own</title>
+    <title>Nespresso King - Creatista Plus</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 	<meta name="description"
-        content="Custom, company branded logo, or art design bluetooth smart keychain locator for recruitment or corporate gifting.">
-    <meta property="og:image" content="https://NespressoKing.github.io/images/180degResized.jpg" />
-    <meta name="keywords" content="Brandable Keychain Company">
-	<meta http-equiv="last-modified" content="Mon, 01 May 2020 14:00:46 GMT " />
+        content="Premium espresso machine with eletronic recipe maker.">
+    <meta property="og:image" content="https://NespressoKing.com/images/CreatistaPlus.png" />
+    <meta name="keywords" content="Nespresso Coffee Machine Original">
+	<meta http-equiv="last-modified" content="Mon, 12 Nov 2022 14:00:46 GMT " />
 	<meta http-equiv="cache-control" content="max-age=86400" />
 	<link rel="preload" href="assets/css/main.css" as="style" onload="this.onload=null; this.rel='stylesheet'" />
-	<link rel="canonical" href="https://www.NespressoKing.github.io/custom" />
+	<link rel="canonical" href="https://www.NespressoKing.com/creatistaPlus" />
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -69,21 +69,17 @@
                                 <div>
                                     <input readonly id="itemnameid" aria-label="Item Name: CreatistaPlus"
                                         style="text-align:center; background: white; font-weight:bold; font-size:25px;"
-                                        name="itemname" type="text" value='CreatistaPlus' />
-                                    <p>We will email you for your custom detailing.</p>
+                                        name="itemname" type="text" value='Creatista Plus' />
                                     <div style="display: flex; justify-content: center">
-                                        <picture>
-                                            <source type="image/webp" data-srcset="images/180degResized.webp" />
-                                            <img alt="Create Your Own Kee Image" class="lazy"
-                                                data-srcset="images/180degResized.jpg" />
-                                        </picture>
+                                        <img alt="Creatista Plus" class="lazy"
+                                            data-srcset="images/CreatistaPlus.png" />
                                     </div>
                                     <div style="display:flex; justify-content: center">
                                         <span>Quantity: </span>
                                         <input id="quant" aria-label="Quantity" style="margin-left:10px; width:100px; height:48px; color:black" type="number" value="1" onchange="quantChanged()"  />
                                     </div>
                                     <div style="display:flex; justify-content: center">
-                                        <input readonly name="itemcost" aria-label="Item Cost" id="itemcost" style="width:30%; min-width: 150px; float:left; background: white; color: green; font-size:20px; " type="text" value="$999.99" />
+                                        <input readonly name="itemcost" aria-label="Item Cost" id="itemcost" style="width:30%; min-width: 150px; float:left; background: white; color: green; font-size:20px; " type="text" value="$639.00" />
                                     </div>
                                     <div class='image' style="display: flex; justify-content: center; margin-top:20px;">
                                         <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
@@ -141,22 +137,22 @@
         });
         
          (function () {
-             var stripe = Stripe('pk_live_FumJoOhlsyEJ7PiO9kffN1jI');
+             var stripe = Stripe('pk_live_51M3PQvG0aVsg4cgcI1LKHapLNRungxqpZAhLMRuEzeTfhjO8h3caHGzIgcBgLUWRlPuLskOcOgDbuzsM0OW03ERL00hcWRnX2m');
  
-             var checkoutButton = document.getElementById('checkout-button-sku_FsOG9Wy4vspE7g');
+             var checkoutButton = document.getElementById('checkout-button-prod_Mn0EsIV1FPBybh');
              checkoutButton.addEventListener('click', function () {
                  // When the customer clicks on the button, redirect
                  // them to Checkout.
                  stripe.redirectToCheckout({
-                     items: [{ sku: 'sku_FsOG9Wy4vspE7g', quantity: parseInt(document.getElementById("quant").value) }],
+                     items: [{ sku: 'prod_Mn0EsIV1FPBybh', quantity: parseInt(document.getElementById("quant").value) }],
  
                      // Do not rely on the redirect to the successUrl for fulfilling
                      // purchases, customers may not always reach the success_url after
                      // a successful payment.
                      // Instead use one of the strategies described in
                      // https://stripe.com/docs/payments/checkout/fulfillment
-                     successUrl: 'https://www.NespressoKing.github.io/success.html',
-                     cancelUrl: 'https://www.NespressoKing.github.io/',
+                     successUrl: 'https://www.NespressoKing.com/success.html',
+                     cancelUrl: 'https://www.NespressoKing.com/',
                  })
                      .then(function (result) {
                          if (result.error) {
@@ -170,7 +166,7 @@
          })();
  
          function quantChanged() {
-             window.location = "custom.html?quant=" + document.getElementById("quant").value;
+             window.location = "creatistaPlus.html?quant=" + document.getElementById("quant").value;
          }
  
          window.onload = function () {
@@ -180,7 +176,7 @@
              console.log(myParam);
              if (myParam != null) {
                  document.getElementById("quant").value = myParam;
-                 document.getElementById("itemcost").value = "$" + parseInt(myParam) * 999.99;
+                 document.getElementById("itemcost").value = "$" + parseInt(myParam) * 639.00;
              }
              ribbon = document.getElementById("timer");
              var today = new Date();
