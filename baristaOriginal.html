@@ -113,13 +113,13 @@
                             <div style="display:flex; justify-content: center">
                                 <input readonly name="itemcost" aria-label="Item Cost" id="itemcost"
                                     style="text-align:center; width:30%; min-width: 150px; float:left; background: white; color: green; font-size:20px; "
-                                    type="text" value="$99.99" />
+                                    type="text" value="$89.99" />
                             </div>
                             <div class='image' style="display: flex; justify-content: center; margin-top:20px;">
                                 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
                                 <button
                                     style="background-color:#2e3842;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-                                    id="checkout-button-price_1M3mAfG0aVsg4cgcUwDGZpkt" role="link" type="button">
+                                    id="checkout-button-price_1M3oreG0aVsg4cgcbOQPve2O" role="link" type="button">
                                     Checkout
                                 </button>
 
@@ -192,12 +192,12 @@
         (function () {
             var stripe = Stripe('pk_live_51M3PQvG0aVsg4cgcI1LKHapLNRungxqpZAhLMRuEzeTfhjO8h3caHGzIgcBgLUWRlPuLskOcOgDbuzsM0OW03ERL00hcWRnX2m');
 
-            var checkoutButton = document.getElementById('checkout-button-price_1M3mAfG0aVsg4cgcUwDGZpkt');
+            var checkoutButton = document.getElementById('checkout-button-price_1M3oreG0aVsg4cgcbOQPve2O');
             checkoutButton.addEventListener('click', function () {
                 // When the customer clicks on the button, redirect
                 // them to Checkout.
                 stripe.redirectToCheckout({
-                    lineItems: [{ price: 'price_1M3mAfG0aVsg4cgcUwDGZpkt', quantity: parseInt(document.getElementById("quant").value) }],
+                    lineItems: [{ price: 'price_1M3oreG0aVsg4cgcbOQPve2O', quantity: parseInt(document.getElementById("quant").value) }],
                     mode: 'payment',
                     // Do not rely on the redirect to the successUrl for fulfilling
                     // purchases, customers may not always reach the success_url after
@@ -233,7 +233,7 @@
             console.log(myParam);
             if (myParam != null) {
                 document.getElementById("quant").value = myParam;
-                document.getElementById("itemcost").value = "$" + parseInt(myParam) * 99.99;
+                document.getElementById("itemcost").value = "$" + parseInt(myParam) * 89.99;
             }
             ribbon = document.getElementById("timer");
             var today = new Date();
