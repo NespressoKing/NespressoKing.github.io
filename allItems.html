@@ -10,8 +10,7 @@
 	<title>Nespresso King - Browse Our Catalog</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-	<meta name="description"
-		content="Search the entire coffee and espresso store for machines, capsules, and more.">
+	<meta name="description" content="Search the entire coffee and espresso store for machines, capsules, and more.">
 	<meta property="og:image" content="https://NespressoKing.github.io/images/30degOGImage.jpg" />
 	<meta name="keywords" content="Nespresso King Product List">
 	<meta http-equiv="last-modified" content="Mon, 07 Nov 2022 14:00:46 GMT " />
@@ -19,13 +18,59 @@
 	<link rel="preload" href="assets/css/main.css" as="style" onload="this.onload=null; this.rel='stylesheet'" />
 	<link rel="canonical" href="https://www.NespressoKing.com/allItems" />
 	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
 	<style>
 		@media screen and (min-width: 0px) and (max-width: 400px) {
-			#ribbon{ display: block; }  /* show it on smaller screen */
+			#ribbon {
+				display: block;
+			}
+
+			/* show it on smaller screen */
 		}
+
 		@media screen and (min-width: 401px) and (max-width: 1024px) {
-			#ribbon{ display: none; }   /* hide it on larger screens */
+			#ribbon {
+				display: none;
+			}
+
+			/* hide it on larger screens */
+		}
+
+		@media only screen and (min-width: 1028px) {
+			.grid-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-auto-rows: 360px;
+				grid-gap: 1em;
+				padding: 10px;
+			}
+		}
+
+		@media only screen and (max-width: 768px) {
+			.grid-container {
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-auto-rows: 360px;
+				grid-gap: 1em;
+				padding: 10px;
+			}
+		}
+
+		@media only screen and (min-width: 768px) and (max-width: 1028px) {
+			.grid-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-auto-rows: 350px;
+				grid-gap: 1rem;
+				padding: 10px;
+			}
+		}
+
+		.grid-item {
+			background-color: rgba(255, 255, 255, 0.8);
+			border: 1px solid rgba(0, 0, 0, 0.8);
+			text-align: center;
 		}
 	</style>
 </head>
@@ -44,8 +89,8 @@
 						<a href="#menu" class="menuToggle">Menu</a>
 						<div id="menu">
 							<ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="allItems.html">Our Products</a></li>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="allItems.html">Our Products</a></li>
 								<li><a href="creatistaPlus.html">Creatista Plus</a></li>
 								<li><a href="lattissimaPro.html">Lattissima Pro</a></li>
 								<li><a href="returns.html">Returns</a></li>
@@ -74,15 +119,16 @@
 			</header>
 			<section class="wrapper style5">
 				<div class="row 150%">
-					<div class="8u$ 12u$(medium) important(medium)">
+					<div style="width:100%">
 
 						<!-- Content -->
-						<section id="content">
+						<section id="content" class="grid-container">
 
-							<div style="float:left; margin-left:20px; min-width:240px;">
+							<div class="grid-item">
 								<div style="display:flex; justify-content: center;">
 									<span
-										style="text-align:center; background: white; font-weight:bold; font-size:25px;">Creatista Pro</span>
+										style="text-align:center; background: white; font-weight:bold; font-size:25px; margin:20px;">Creatista
+										Pro</span>
 								</div>
 								<div style="display: flex; justify-content: center">
 									<picture>
@@ -94,16 +140,16 @@
 									<input style="float:left; background:white;" readonly name="itemtags" type="hidden"
 										value='plain, white' />
 									<ul class="actions stacked">
-										<li><a
-												class="button fit primary">Out of stock</a></li>
+										<li><a class="button fit primary">Out of stock</a></li>
 									</ul>
 								</div>
 							</div>
 
-							<div style="float:left; margin-left:10px;">
+							<div class="grid-item">
 								<div style="display:flex; justify-content: center;">
 									<span
-										style="text-align:center; width:250px; background: white; font-weight:bold; font-size:25px;">Creatista Plus</span>
+										style="text-align:center; width:250px; background: white; font-weight:bold; font-size:25px; margin:20px;">Creatista
+										Plus</span>
 								</div>
 								<div style="display: flex; justify-content: center">
 									<picture>
@@ -115,15 +161,17 @@
 									<input style="float:left; background:white;" readonly name="itemtags" type="hidden"
 										value='create, your, own, diy' />
 									<ul class="actions stacked">
-										<li><a href="creatistaPlus.html" class="button fit primary">Buy - $639.00</a></li>
+										<li><a href="creatistaPlus.html" class="button fit primary">Buy - $639.00</a>
+										</li>
 									</ul>
 								</div>
 							</div>
 
-							<div style="float:left;">
+							<div class="grid-item">
 								<div style="display:flex; justify-content: center;">
 									<span
-										style="text-align:center; width:250px; background: white; font-weight:bold; font-size:25px;">Lattissima Pro</span>
+										style="text-align:center; width:250px; background: white; font-weight:bold; font-size:25px; margin:20px;">Lattissima
+										Pro</span>
 								</div>
 								<div style="display: flex; justify-content: center">
 									<picture>
@@ -135,19 +183,21 @@
 									<input style="float:left; background:white;" readonly name="itemtags" type="hidden"
 										value='Lattissima, Pro, Original, Nespresso' />
 									<ul class="actions stacked">
-										<li><a href="lattissimaPro.html" class="button fit primary">Buy - $639.00</a></li>
+										<li><a href="lattissimaPro.html" class="button fit primary">Buy - $639.00</a>
+										</li>
 									</ul>
 								</div>
 							</div>
 
-							<div style="float:left;">
+							<div class="grid-item">
 								<div style="display:flex; justify-content: center;">
 									<span
-										style="text-align:center; width:250px; background: white; font-weight:bold; font-size:25px;">Pierre HERMÉ Original Pack</span>
+										style="text-align:center; width:250px; background: white; font-weight:bold; font-size:19px; margin:20px; ">Pierre
+										HERMÉ Original</span>
 								</div>
 								<div style="display: flex; justify-content: center">
 									<picture>
-										<img width="150px" height="200px" he alt="PIERRE HERMÉ PACK Image" class="lazy"
+										<img width="150px" height="200px" alt="PIERRE HERMÉ PACK Image" class="lazy"
 											data-srcset="images/PierreHermeOriginal.png" />
 									</picture>
 								</div>
@@ -155,7 +205,8 @@
 									<input style="float:left; background:white;" readonly name="itemtags" type="hidden"
 										value='Pierre, Herme, Original, Nespresso' />
 									<ul class="actions stacked">
-										<li><a href="pierrehermeoriginal.html" class="button fit primary">Buy - $99.99</a></li>
+										<li><a href="pierrehermeoriginal.html" class="button fit primary">Buy -
+												$99.99</a></li>
 									</ul>
 								</div>
 							</div>
